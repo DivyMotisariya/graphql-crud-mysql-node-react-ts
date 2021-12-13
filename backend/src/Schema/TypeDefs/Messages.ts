@@ -1,11 +1,4 @@
-import {
-  GraphQLBoolean,
-  GraphQLList,
-  GraphQLObjectType,
-  GraphQLString,
-  GraphQLUnionType,
-} from "graphql";
-import { UserType } from "./User";
+import { GraphQLBoolean, GraphQLObjectType, GraphQLString } from "graphql";
 
 export const MessageType = new GraphQLObjectType({
   name: "Message",

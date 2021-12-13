@@ -1,6 +1,5 @@
 import { GraphQLID, GraphQLString } from "graphql";
 import { Users } from "../../Entities/Users";
-import { UserType } from "../TypeDefs/User";
 import { MessageType } from "../TypeDefs/Messages";
 
 export const CREATE_USER = {
