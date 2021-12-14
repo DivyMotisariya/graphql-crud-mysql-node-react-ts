@@ -7,7 +7,11 @@ const UpdatePassword = () => {
   const [username, setUsername] = useState("");
   const [newPassword, setNewPassword] = useState("");
 
-  const [updatePassword] = useMutation(UPDATE_PASSWORD);
+  const [updatePassword, { error }] = useMutation(UPDATE_PASSWORD);
+
+  if (error) {
+    return <h1>{error.message}</h1>;
+  }
 
   return (
     <React.Fragment>
@@ -34,7 +38,7 @@ const UpdatePassword = () => {
           onClick={async (evt) =>
             updatePassword({
               variables: { username, oldPassword, newPassword },
-            })
+            }).catch(console.log)
           }
           type="submit"
         >
