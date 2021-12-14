@@ -26,9 +26,9 @@ export const CREATE_USER = {
 export const UPDATE_PASSWORD = {
   type: MessageType,
   args: {
-    username: { type: GraphQLID },
-    oldPassword: { type: GraphQLID },
-    newPassword: { type: GraphQLID },
+    username: { type: GraphQLString },
+    oldPassword: { type: GraphQLString },
+    newPassword: { type: GraphQLString },
   },
   resolve: async (parent: any, args: any) => {
     const { username, oldPassword, newPassword } = args;
